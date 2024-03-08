@@ -1,0 +1,158 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "slots": [],
+          "name": "HelloWorldIntent",
+          "samples": [
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "action",
+              "type": "ActionType"
+            },
+            {
+              "name": "distance",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "direction",
+              "type": "DirectionType"
+            }
+          ],
+          "name": "MoveRobotIntent",
+          "samples": [
+            "{action} locobot {distance} meters {direction}",
+            "locobot {action} {distance} meters {direction} ",
+            "locobot {action} {direction} to {distance} meters",
+            "can you {action} {distance} meters {direction} locobot",
+            "can you {action} {distance} meters {direction}",
+            "hey locobot {action} {distance} meters {direction}",
+            "hello locobot {action} {distance} meters {direction}",
+            "hi locobot {action} {distance} meters {direction}",
+            "hello locobot i need you to {action} {distance} meters {direction}",
+            "hi locobot i need you to {action} {distance} meters {direction}",
+            "hey locobot i need you to {action} {distance} meters {direction}",
+            "locobot {action} {direction} by {distance} meters",
+            "locobot can you {action} {distance} meters {direction}",
+            "locobot {action} {distance} meter {direction}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "shift"
+              }
+            },
+            {
+              "name": {
+                "value": "advance"
+              }
+            },
+            {
+              "name": {
+                "value": "change position"
+              }
+            },
+            {
+              "name": {
+                "value": "travel"
+              }
+            },
+            {
+              "name": {
+                "value": "step"
+              }
+            },
+            {
+              "name": {
+                "value": "proceed"
+              }
+            },
+            {
+              "name": {
+                "value": "move"
+              }
+            },
+            {
+              "name": {
+                "value": "go"
+              }
+            }
+          ],
+          "name": "ActionType"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "right"
+              }
+            },
+            {
+              "name": {
+                "value": "left"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "rearward",
+                  "reverse",
+                  "retire"
+                ],
+                "value": "backward"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "advance",
+                  "further",
+                  "ahead",
+                  "progress"
+                ],
+                "value": "forward"
+              }
+            }
+          ],
+          "name": "DirectionType"
+        }
+      ],
+      "invocationName": "locobot voice control"
+    }
+  }
+}
